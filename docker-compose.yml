@@ -1,0 +1,8 @@
+nginx-confd:
+  build: .
+  volumes:
+    - ./website:/var/www/localhost/htdocs
+  environment:
+    - SERVER_NAME=sample.com
+  ports:
+    - "3000:80"
